@@ -1,6 +1,6 @@
-## Generally useful Win10 (and 11) things
+## Generally potentially useful Win10 (and 11) things
 
-Note that you should only use any of these if you know what you're doing and e.g. practice proper backuping practices and internet hygiene when it comes to stuff like downloaded files.
+Note that you should only use any of these if you know what you're doing and e.g. practice proper backuping practices and internet hygiene when it comes to stuff like downloaded files. Also this is not a list where each entry is equally useful; see which ones are helpful to you, if any, and apply them.
 
 ### Disable prompt on opening an executable or file Windows considers unsafe:
 1. Control panel > Internet options > Security > Custom level
@@ -10,23 +10,36 @@ Note that you should only use any of these if you know what you're doing and e.g
 1. Run > services.msc
 2. Stop service ”Windows Error Reporting Service” and set ”Startup type” to ”Disabled”
 
-### Disable Windows 11 update nagging:
-- Method 1:
-  1. Settings > Update & Security > Windows Update > Advanced options
-  2. Disable ”Receive updates for other Microsoft products when you update Windows”
-- Method 2:
-  1. Run > services.msc
-  2. Stop service ”Windows Update” and set ”Startup type” to ”Disabled”
-- Method 3 (Win10 Pro only):
+### Disable Win11 upgrade nagging:
+1. Go to https://aka.ms/WindowsTargetVersioninfo and make note of the latest version number for Windows 10, at time of writing that's 22H2
+2. Via group policies (Win10 Pro only):
   1. Run > gpedit.msc
-  2. Computer Configuration > Administrative Templates > Windows Components > Windows Update > Configure Automatic Updates
-  3. Set to ”Disabled”
+  2. Computer Configuration > Administrative Templates > Windows Components > Windows Update > Windows Update for Business
+  3. Select "Select target Feature Update version" and enable it
+  4. Fill in the product and version fields with "Windows 10" and the version retrieved above
+3. Via registry:
+  1. HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
+  2. Set/add string with name "ProductVersion" and value "Windows 10"
+  3. Set/add string with name "TargetReleaseVersionInfo" and the value being the version retrieved above
+  4. Set/add dword with name "TargetReleaseVersion" and value 1
 
-Source: https://answers.microsoft.com/en-us/windows/forum/all/system-keeps-nagging-me-with-win11-update/ffb4a450-6640-429a-9d8d-4dc2a4b6ce95
+Source: https://cohost.org/Hempuli/post/3622800-decided-to-list-some#comment-aeae3d91-0317-42d8-824f-7814c52b4064
 
 ### Restore Win10 context menu in Win11:
 - reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
   - Restore new context menu: reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f
+ 
+### Disable XBox Game Bar:
+1. HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR
+2. Set/add dword named "AppCaptureEnabled" with value 0
+3. HKEY_CURRENT_USER\System\GameConfigStore
+4. Set/add dword named "GameDVR_Enabled" with value 0
+
+Source: https://cohost.org/Hempuli/post/3622800-decided-to-list-some#comment-cc4ecbb5-f995-4b14-a225-4d87d538a067
+
+### Disable Start Menu Bing searches:
+1. HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer
+2. Set/add dword named "DisableSearchBoxSuggestions" with value 1
 
 ### Remove ”Share” from context menu:
 1. Computer\HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\ModernSharing
@@ -91,6 +104,20 @@ Source: https://www.howtogeek.com/720449/how-to-remove-cast-to-device-option-fro
   - ...And a bunch of others too in the HKEY_CLASSES_ROOT -folder (e.g. OpenOffice filetypes)
  
 Source: https://winaero.com/remove-print-context-menu-in-windows-10/
+
+### Disable Windows updates (probably not a great idea):
+- Method 1:
+  1. Settings > Update & Security > Windows Update > Advanced options
+  2. Disable ”Receive updates for other Microsoft products when you update Windows”
+- Method 2:
+  1. Run > services.msc
+  2. Stop service ”Windows Update” and set ”Startup type” to ”Disabled”
+- Method 3 (Win10 Pro only):
+  1. Run > gpedit.msc
+  2. Computer Configuration > Administrative Templates > Windows Components > Windows Update > Configure Automatic Updates
+  3. Set to ”Disabled”
+
+Source: https://answers.microsoft.com/en-us/windows/forum/all/system-keeps-nagging-me-with-win11-update/ffb4a450-6640-429a-9d8d-4dc2a4b6ce95
 
 ### Prevent AI Copilot in Win10 or Win11:
 1. HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced
