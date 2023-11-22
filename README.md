@@ -54,6 +54,12 @@ Source: https://cohost.org/purpleraccoon/post/3617693-if-you-re-stuck-on-w
 1. Some subfolders/-files might still not change, edit those separately in the same way
 6. Back in Security, click Edit... and check all boxes for Administrators
 
+### Restore old Windows Photo Viewer:
+1. Create a .reg file with the code from "Restore_Windows_Photo_Viewer_ALL_USERS_with_Sort_order_fix.txt"
+2. Run the .reg file
+Code by Shawn Brink
+Source: https://www.tenforums.com/tutorials/14312-restore-windows-photo-viewer-windows-10-a.html
+
 ### Generally useful utilities:
 AutoRun
 WinDirStat / WizTree
