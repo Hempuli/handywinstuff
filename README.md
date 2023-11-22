@@ -100,4 +100,18 @@ KeePassX
 Process Explorer (Pexplorer/procexp)
 ResourceHacker
 TCPview
+Powertoys:
+  https://learn.microsoft.com/en-us/windows/powertoys
+Upgraded command prompt:
+  https://learn.microsoft.com/en-us/windows/terminal/install
+Windows package manager:
+  https://learn.microsoft.com/en-us/windows/package-manager/winget/
+```
+
+### Handy inbuilt tools:
+```
+Run > services.msc
+Run > gpedit.msc
+dxdiag.exe
+regedit.exe
 ```
