@@ -1,6 +1,8 @@
 ## Generally useful Win10 (and 11) things
 
-### Disable prompt on opening an executable:
+Note that you should only use any of these if you know what you're doing and e.g. practice proper backuping practices and internet hygiene when it comes to stuff like downloaded files.
+
+### Disable prompt on opening an executable or file Windows considers unsafe:
 1. Control panel > Internet options > Security > Custom level
 2. Set ”Launching applications and unsafe files” to ”enable”
 
