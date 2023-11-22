@@ -87,6 +87,8 @@ Source: https://www.howtogeek.com/720449/how-to-remove-cast-to-device-option-fro
   - HKEY_CLASSES_ROOT\VBSFile\Shell\Print
   - HKEY_CLASSES_ROOT\WSFFile\Shell\Print
   - ...And a bunch of others too in the HKEY_CLASSES_ROOT -folder (e.g. OpenOffice filetypes)
+ 
+Source: https://winaero.com/remove-print-context-menu-in-windows-10/
 
 ### Prevent AI Copilot in Win10 or Win11:
 1. HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced
