@@ -11,13 +11,13 @@ Note that you should only use any of these if you know what you're doing and e.g
 2. Stop service ”Windows Error Reporting Service” and set ”Startup type” to ”Disabled”
 
 ### Disable Win11 upgrade nagging:
-1. Go to https://aka.ms/WindowsTargetVersioninfo and make note of the latest version number for Windows 10, at time of writing that's 22H2
-2. Via group policies (Win10 Pro only):
+- Go to https://aka.ms/WindowsTargetVersioninfo and make note of the latest version number for Windows 10, at time of writing that's 22H2
+- Via group policies (Win10 Pro only):
   1. Run > gpedit.msc
   2. Computer Configuration > Administrative Templates > Windows Components > Windows Update > Windows Update for Business
   3. Select "Select target Feature Update version" and enable it
   4. Fill in the product and version fields with "Windows 10" and the version retrieved above
-3. Via registry:
+- Via registry:
   1. HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
   2. Set/add string with name "ProductVersion" and value "Windows 10"
   3. Set/add string with name "TargetReleaseVersionInfo" and the value being the version retrieved above
