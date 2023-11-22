@@ -4,6 +4,24 @@
 1. Control panel > Internet options > Security > Custom level
 2. Set ”Launching applications and unsafe files” to ”enable”
 
+### Disable Windows trying to report program crashes to Microsoft:
+1. Run > services.msc
+2. Stop service ”Windows Error Reporting Service” and set ”Startup type” to ”Disabled”
+
+### Disable Windows 11 update nagging:
+- Method 1:
+  1. Settings > Update & Security > Windows Update > Advanced options
+  2. Disable ”Receive updates for other Microsoft products when you update Windows”
+- Method 2:
+  1. Run > services.msc
+  2. Stop service ”Windows Update” and set ”Startup type” to ”Disabled”
+- Method 3 (Win10 Pro only):
+  1. Run > gpedit.msc
+  2. Computer Configuration > Administrative Templates > Windows Components > Windows Update > Configure Automatic Updates
+  3. Set to ”Disabled”
+
+Source: https://answers.microsoft.com/en-us/windows/forum/all/system-keeps-nagging-me-with-win11-update/ffb4a450-6640-429a-9d8d-4dc2a4b6ce95
+
 ### Remove ”Share” from context menu:
 1. Computer/HKEY_CLASSES_ROOT/*/shellex/ContextMenuHandlers/ModernSharing
 2. Delete key ”ModernSharing”
