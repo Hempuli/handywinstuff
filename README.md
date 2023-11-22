@@ -27,39 +27,39 @@ Source: https://answers.microsoft.com/en-us/windows/forum/all/system-keeps-naggi
   - Restore new context menu: reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f
 
 ### Remove ”Share” from context menu:
-1. Computer/HKEY_CLASSES_ROOT/*/shellex/ContextMenuHandlers/ModernSharing
+1. Computer\HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\ModernSharing
 2. Delete key ”ModernSharing”
 
 Source: https://www.majorgeeks.com/content/page/remove_the_share_context_menu_in_windows_10.html
 
 ### Remove ”Give access to” from context menu:
-1. HKEY_LOCAL_MACHINE/SOFTWARE/Microsoft/Windows/CurrentVersion/Shell Extensions
+1. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions
 2. Create key ”Blocked” if it doesn't exist
 3. Add empty string value named ”{f81e9010-6ea4-11ce-a7ff-00aa003ca9f6}”
 
 Source: https://www.majorgeeks.com/content/page/remove_the_give_access_to_context_menu_in_windows_10.html
 
 ### Remove ”Send to” from context menu:
-1. HKEY_CLASSES_ROOT/AllFilesystemObjects/shellex/ContextMenuHandlers/Send To
+1. HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\Send To
 2. Open (Default) and clear its value
 
 Source: https://www.isumsoft.com/windows-10/remove-or-restore-the-send-to-context-menu.html
 
 ### Remove ”Restore previous versions” from context menu:
-1. HKEY_LOCAL_MACHINE/SOFTWARE/Microsoft/Windows/CurrentVersion/Shell Extensions
+1. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions
 2. Create key ”Blocked” if it doesn't exist
 3. Add empty string value named ”{596AB062-B4D2-4215-9F74-E9109B0A8153}”
 
 Source: https://www.thewindowsclub.com/remove-restore-previous-versions-context-menu
 
 ### Remove ”Include in library” from context menu:
-1. HKEY_CLASSES_ROOT/Folder/ShellEx/ContextMenuHandlers
+1. HKEY_CLASSES_ROOT\Folder\ShellEx\ContextMenuHandlers
 2. Delete key ”Library Location”
 
 Source: https://winaero.com/remove-include-library-windows-10/
 
 ### Remove ”Cast to device” from context menu:
-1. HKEY_LOCAL_MACHINE/SOFTWARE/Microsoft/Windows/CurrentVersion/Shell Extensions
+1. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions
 2. Create key ”Blocked” if it doesn't exist
 3. Add empty string value named ”{7AD84985-87B4-4a16-BE58-8B72A5B390F7}”
 
