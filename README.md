@@ -160,6 +160,7 @@ Upgraded command prompt:
   https://learn.microsoft.com/en-us/windows/terminal/install
 Windows package manager:
   https://learn.microsoft.com/en-us/windows/package-manager/winget/
+  Nicer UI available via WingetUI: https://github.com/marticliment/WingetUI
 ```
 
 ### Handy inbuilt tools:
