@@ -65,6 +65,29 @@ Source: https://winaero.com/remove-include-library-windows-10/
 
 Source: https://www.howtogeek.com/720449/how-to-remove-cast-to-device-option-from-windows-10-context-menu/
 
+### Remove ”Print” from Win10 context menu:
+- Add empty string value named ”ProgrammaticAccessOnly” to the following registry entries:
+  - HKEY_CLASSES_ROOT\SystemFileAssociations\image\shell\print
+  - HKEY_CLASSES_ROOT\batfile\shell\print
+  - HKEY_CLASSES_ROOT\cmdfile\shell\print
+  - HKEY_CLASSES_ROOT\docxfile\shell\print
+  - HKEY_CLASSES_ROOT\fonfile\shell\print
+  - HKEY_CLASSES_ROOT\htmlfile\shell\print
+  - HKEY_CLASSES_ROOT\inffile\shell\print
+  - HKEY_CLASSES_ROOT\inifile\shell\print
+  - HKEY_CLASSES_ROOT\JSEFile\Shell\Print
+  - HKEY_CLASSES_ROOT\otffile\shell\print
+  - HKEY_CLASSES_ROOT\pfmfile\shell\print
+  - HKEY_CLASSES_ROOT\regfile\shell\print
+  - HKEY_CLASSES_ROOT\rtffile\shell\print
+  - HKEY_CLASSES_ROOT\ttcfile\shell\print
+  - HKEY_CLASSES_ROOT\ttffile\shell\print
+  - HKEY_CLASSES_ROOT\txtfile\shell\print
+  - HKEY_CLASSES_ROOT\VBEFile\Shell\Print
+  - HKEY_CLASSES_ROOT\VBSFile\Shell\Print
+  - HKEY_CLASSES_ROOT\WSFFile\Shell\Print
+  - ...And a bunch of others too in the HKEY_CLASSES_ROOT -folder (e.g. OpenOffice filetypes)
+
 ### Prevent AI Copilot in Win10 or Win11:
 1. HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced
 2. Add dword named ”ShowCopilotButton” with value 0
