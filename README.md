@@ -69,6 +69,7 @@ Code by Shawn Brink
 Source: https://www.tenforums.com/tutorials/14312-restore-windows-photo-viewer-windows-10-a.html
 
 ### Generally useful utilities:
+```
 AutoRun
 WinDirStat / WizTree
 FileTypesMan
@@ -76,3 +77,4 @@ KeePassX
 Process Explorer (Pexplorer/procexp)
 ResourceHacker
 TCPview
+```
