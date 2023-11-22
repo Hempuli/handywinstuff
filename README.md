@@ -22,6 +22,10 @@
 
 Source: https://answers.microsoft.com/en-us/windows/forum/all/system-keeps-nagging-me-with-win11-update/ffb4a450-6640-429a-9d8d-4dc2a4b6ce95
 
+### Restore Win10 context menu in Win11:
+- reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
+  - Restore new context menu: reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f
+
 ### Remove ”Share” from context menu:
 1. Computer/HKEY_CLASSES_ROOT/*/shellex/ContextMenuHandlers/ModernSharing
 2. Delete key ”ModernSharing”
