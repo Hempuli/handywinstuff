@@ -66,6 +66,7 @@ Source: https://cohost.org/purpleraccoon/post/3617693-if-you-re-stuck-on-w
 2. Run the .reg file
 
 Code by Shawn Brink
+
 Source: https://www.tenforums.com/tutorials/14312-restore-windows-photo-viewer-windows-10-a.html
 
 ### Generally useful utilities:
